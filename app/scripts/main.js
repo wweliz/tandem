@@ -9,11 +9,13 @@ var LogInView = Backbone.View.extend({
 	initialize: function(){
 		//appends login-view div with contents of the login-template
 		$('.login-view').append(this.el);
+		this.render();
 	},
 
 	render: function(){
 		this.$el.html(this.loginTemplate);
 		return this;
+		console.log('render function ran');
 	}
 
 });
@@ -45,6 +47,7 @@ var SetLanguagesView = Backbone.View.extend({
 	initialize: function(){
 		//appends set-lang-view div with contents of the set-lang-template
 		$('.set-lang-view').append(this.el);
+		this.render();
 	},
 
 	render: function(){
@@ -62,6 +65,7 @@ var ToMeetView = Backbone.View.extend({
 	initialize: function(){
 		//appends to-meet-view div with contents of the login-template
 		$('.to-meet-view').append(this.el);
+		this.render();
 	},
 
 	render: function(){
@@ -79,6 +83,7 @@ var MessengerView = Backbone.View.extend({
 	initialize: function(){
 		//appends messenger-view div with contents of the messenger-template
 		$('.messenger-view').append(this.el);
+		this.render();
 	},
 
 	render: function(){
@@ -96,10 +101,10 @@ var AppRouter = Backbone.Router.extend({
 
 
 		''					: 'renderLogIn',				//	url/#
-		'aboutme'		: 'renderAboutMe',			//	url/aboutme
-		'setlang'		: 'renderSetLanguages',	//	url/setlang
-		'tomeet'		: 'renderToMeet',				//	url/tomeet
-		'messenger'	: 'renderMessenger'			//	url/messenger
+		'aboutme'		: 'renderAboutMe',			//	url/#aboutme
+		'setlang'		: 'renderSetLanguages',	//	url/#setlang
+		'tomeet'		: 'renderToMeet',				//	url/#tomeet
+		'messenger'	: 'renderMessenger'			//	url/#messenger
 	},
 
 	initialize: function(){
@@ -108,6 +113,7 @@ var AppRouter = Backbone.Router.extend({
 
   renderLogIn: function(){
   	new LogInView();
+  	console.log('LogInView rendered');
   },
 
   renderAboutMe: function(){
