@@ -8,7 +8,7 @@ var LogInView = Backbone.View.extend({
 
 	initialize: function(){
 		//appends login-view div with contents of the login-template
-		$('.login-view').append(this.el);
+		$('.login-view').html(this.el);
 		this.render();
 	},
 
@@ -16,7 +16,6 @@ var LogInView = Backbone.View.extend({
 		this.$el.html(this.loginTemplate);
 		return this;
 	}
-
 });
 console.log('render function ran');
 
@@ -27,7 +26,7 @@ var AboutMeView = Backbone.View.extend({
 
 	initialize: function(){
 		//appends about-me-view div with contents of the about-me-template
-		$('.about-me-view').append(this.el);
+		$('.about-me-view').html(this.el);
 		this.render();
 	},
 
@@ -46,7 +45,7 @@ var SetLanguagesView = Backbone.View.extend({
 
 	initialize: function(){
 		//appends set-lang-view div with contents of the set-lang-template
-		$('.set-lang-view').append(this.el);
+		$('.set-lang-view').html(this.el);
 		this.render();
 	},
 
@@ -64,7 +63,7 @@ var ToMeetView = Backbone.View.extend({
 
 	initialize: function(){
 		//appends to-meet-view div with contents of the login-template
-		$('.to-meet-view').append(this.el);
+		$('.to-meet-view').html(this.el);
 		this.render();
 	},
 
@@ -82,7 +81,7 @@ var MessengerView = Backbone.View.extend({
 
 	initialize: function(){
 		//appends messenger-view div with contents of the messenger-template
-		$('.messenger-view').append(this.el);
+		$('.messenger-view').html(this.el);
 		this.render();
 	},
 
@@ -108,28 +107,33 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	initialize: function(){
-		this.renderLogIn();
+		this.currentView = null;
 	},
 
   renderLogIn: function(){
-  	new LogInView();
-  	console.log('LogInView rendered');
+  	this.swap( new LogInView() );
   },
 
   renderAboutMe: function(){
-  	new AboutMeView();
+  	this.swap( new AboutMeView() );
   },
 
-    renderSetLanguages: function(){
-  	new SetLanguagesView();
+  renderSetLanguages: function(){
+  	this.swap( new SetLanguagesView() );
   },
 
 	renderToMeet: function(){
-  	new ToMeetView();
+  	this.swap( new ToMeetView() );
   },
 
   renderMessenger: function(){
-  	new MessengerView();
+  	this.swap( new MessengerView() );
+  },
+
+  swap: function(view){
+	  if (this.currentView) this.currentView.remove();
+	  this.currentView = view;
+	  this.currentView.render();
   }
 
 });
