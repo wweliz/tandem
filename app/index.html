@@ -19,6 +19,7 @@
 		<!-- build:js scripts/vendor/modernizr.js -->
 		<script src="bower_components/modernizr/modernizr.js"></script>
 		<!-- endbuild -->
+
 	</head>
 
 	<body>
@@ -42,47 +43,171 @@
 
 		<script type="text/template" class="set-lang-template">
       <div class="set-lang-container">
-      <nav>
-	     <ul>
-		    <li><a href="#">Native Language<div id="down-triangle"></div></a>
-			   <ul>
-				  <li><a href="#">English<div class="circle"></div></a></li>
-				  <li><a href="#">Spanish<div class="circle"></div></a></li>
-				  <li><a href="#">German<div class="circle"></div></a></li>
-				  <li><a href="#">Italian<div class="circle"></div></a></li>
-				  <li><a href="#">French<div class="circle"></div></a></li>
-			   </ul>
-		   </li>
-	    </ul>
-     </nav>
 
-		<nav>
-		<ul>
-			<li><a href="#">Language I Want to Learn<div id="down-triangle"></div></a>
-			<ul>
-				<li><a href="#">English<div class="circle"></div></a></li>
-				<li><a href="#">Spanish<div class="circle"></div></a></li>
-				<li><a href="#">German<div class="circle"></div></a></li>
-				<li><a href="#">Italian<div class="circle"></div></a></li>
-				<li><a href="#">French<div class="circle"></div></a></li>
-			</ul>
-		</li>
-		</ul>
-	</nav>
+         <div class="list-choice" id="native-language">
+           <div class="list-choice-title">Native Language</div>
+             <div class="list-choice-objects">
+              <label>
+               <input type="radio" value="nl1" name="lang"/>
+				       <span>English</span>
+              </label>
+              <label>
+               <input type="radio" value="nl2" name="lang"/>
+					     <span>Spanish</span>
+              </label>
+              <label>
+               <input type="radio" value="nl3" name="lang"/>
+               <span>German</span>
+              </label>
+              <label>
+               <input type="radio" value="nl4" name="lang"/>
+               <span>French</span>
+              </label>
+              <label>
+               <input type="radio" value="nl5" name="lang"/>
+	             <span>Italian</span>
+              </label>
+              <label>
+               <input type="radio" value="nl6" name="lang"/>
+						   <span>Chinese</span>
+              </label>
+          </div>
+        </div>
 
-	  <nav>
-			<ul>
-				<li><a href="#">Language I want to Learn<div id="down-triangle"></div></a>
-				<ul>
-					<li><a href="#">English<div class="circle"></div></a></li>
-					<li><a href="#">Spanish<div class="circle"></div></a></li>
-					<li><a href="#">German<div class="circle"></div></a></li>
-					<li><a href="#">Italian<div class="circle"></div></a></li>
-					<li><a href="#">French<div class="circle"></div></a></li>
-				</ul>
-			</li>
-			</ul>
-		</nav>
+				<div class="set-lang-divider"></div>
+
+				<div class="list-choice" id="second-language">
+					<div class="list-choice-title">Language I want to learn</div>
+						<div class="list-choice-objects">
+						<label>
+							<input type="radio" value="sl1" name="lang"/>
+							<span>English</span>
+						</label>
+						<label>
+							<input type="radio" value="sl2" name="lang"/>
+							<span>Spanish</span>
+						</label>
+						<label>
+							<input type="radio" value="sl3" name="lang"/>
+							<span>German</span>
+						</label>
+						<label>
+							<input type="radio" value="sl4" name="lang"/>
+							<span>French</span>
+						</label>
+						<label>
+							<input type="radio" value="sl5" name="lang"/>
+							<span>Italian</span>
+						</label>
+						<label>
+							<input type="radio" value="sl6" name="lang"/>
+							<span>Chinese</span>
+						</label>
+						<label>
+							<input type="radio" value="sl7" name="lang"/>
+							<span>None</span>
+						</label>
+				</div>
+			</div>
+
+			<div class="list-choice" id="second-language-prof">
+				<div class="list-choice-title">Proficiency</div>
+					<div class="list-choice-objects">
+					<label>
+						<input type="radio" value="slp1" name="lang"/>
+						<span>Beginner</span>
+					</label>
+					<label>
+						<input type="radio" value="slp2" name="lang"/>
+						<span>Basic Conversation</span>
+					</label>
+					<label>
+						<input type="radio" value="slp3" name="lang"/>
+						<span>Intermediate</span>
+					</label>
+					<label>
+						<input type="radio" value="slp4" name="lang"/>
+						<span>Advanced Intermediate</span>
+					</label>
+					<label>
+						<input type="radio" value="slp5" name="lang"/>
+						<span>Advanced</span>
+					</label>
+					<label>
+						<input type="radio" value="slp6" name="lang"/>
+						<span>Fluent</span>
+					</label>
+					<label>
+			</div>
+		</div>
+
+		<div class="set-lang-divider"></div>
+
+			<div class="list-choice" id="third-language">
+				<div class="list-choice-title">Second Language I want to learn</div>
+					<div class="list-choice-objects">
+					<label>
+						<input type="radio" value="tl1" name="lang"/>
+						<span>English</span>
+					</label>
+					<label>
+						<input type="radio" value="tl2" name="lang"/>
+						<span>Spanish</span>
+					</label>
+					<label>
+						<input type="radio" value="tl3" name="lang"/>
+						<span>German</span>
+					</label>
+					<label>
+						<input type="radio" value="tl4" name="lang"/>
+						<span>French</span>
+					</label>
+					<label>
+						<input type="radio" value="tl5" name="lang"/>
+						<span>Italian</span>
+					</label>
+					<label>
+						<input type="radio" value="tl6" name="lang"/>
+						<span>Chinese</span>
+					</label>
+					<label>
+						<input type="radio" value="tl7" name="lang"/>
+						<span>None</span>
+					</label>
+			</div>
+		</div>
+
+    <div class="list-choice" id="third-language-prof">
+					<div class="list-choice-title">Proficiency</div>
+						<div class="list-choice-objects">
+						<label>
+							<input type="radio" value="tlp1" name="lang"/>
+							<span>Beginner</span>
+						</label>
+						<label>
+							<input type="radio" value="tlp2" name="lang"/>
+							<span>Basic Conversation</span>
+						</label>
+						<label>
+							<input type="radio" value="tlp3" name="lang"/>
+							<span>Intermediate</span>
+						</label>
+						<label>
+							<input type="radio" value="tlp4" name="lang"/>
+							<span>Advanced Intermediate</span>
+						</label>
+						<label>
+							<input type="radio" value="tlp5" name="lang"/>
+							<span>Advanced</span>
+						</label>
+						<label>
+							<input type="radio" value="tlp6" name="lang"/>
+							<span>Fluent</span>
+						</label>
+						<label>
+				</div>
+			</div>
+
       </div>
 		</script>
 
@@ -135,6 +260,7 @@
 		<!-- bower:js -->
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/underscore/underscore.js"></script>
+		<!-- <script src="bower_components/backbone/backbone.js"></script> -->
 		<script src="bower_components/parse-js-sdk/lib/parse.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->

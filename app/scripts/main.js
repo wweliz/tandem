@@ -131,14 +131,20 @@ var AppRouter = Parse.Router.extend({
   },
 
   swap: function(view){
-	  if (this.currentView) this.currentView.remove();
+	  if (this.currentView) {this.currentView.remove();
 	  this.currentView = view;
 	  this.currentView.render();
   }
-
+}
 });
 
 // INSTANTIATING THE ROUTER /////////////////////
-Parse.initialize("VqnYqznvx3Wc5ONfDghDMrZqwx77KEFiESe4l82W", "z3vDhzbq25kW3Y0uCNRnOBmsEMWb0XmANkjF1rTh");
+Parse.initialize('VqnYqznvx3Wc5ONfDghDMrZqwx77KEFiESe4l82W', 'z3vDhzbq25kW3Y0uCNRnOBmsEMWb0XmANkjF1rTh');
 new AppRouter();
 Parse.history.start();
+
+
+// $(document).ready(function() {
+//     $('.menu').dropit();
+//
+// });
