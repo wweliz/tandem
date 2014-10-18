@@ -58,7 +58,7 @@
       </div>
 		</script>
 
-    <script type="text/template" class="about-me-template">
+    	<script type="text/template" class="about-me-template">
 			 <div class="about-me-container">
 
 			 </div>
@@ -66,31 +66,47 @@
 		</script>
 
 		<script type="text/template" class="to-meet-template">
-			<h2>Who I want to meet</h2>
-			<form>
 
-			<label>Minimum Age:</label>
-			<input type="text" id="minAge" value="18" size="2">
-			<label>Maximum Age:</label>
-			<input type="text" id="maxAge" value="99" size="2">
+		<h2>Who I want to meet</h2>
+            <form>
+                <ul>
 
-			<label>Sex:</label>
-			<select name="sexSelect" id="sexSelect">
-	        <option value='1'>Male</option>
-	        <option value='2'>Female</option>
-	        </select>
+					<li>
+					<label>Minimum Age:</label>
+					<input type="text" id="minAge" value="18" size="2">
+					<label>Maximum Age:</label>
+					<input type="text" id="maxAge" value="99" size="2">
+					</li>
 
-			<label>Language:</label>
-			<select name="languageSelect" id="languageSelect">
-	        <option value='1'>Chinese</option>
-	        <option value='2'>French</option>
-	        <option value='3'>German</option>
-	        <option value='4'>Spanish</option>
-	        </select>
+					<li>
+					<label>Sex:</label>
+					<select name="sexSelect" id="sexSelect">
+					<option value='1'>Male</option>
+					<option value='2'>Female</option>
+					</select>
+					</li>
 
-			<label>Location Range:</label>
+					<li>
+					<label>Language:</label>
+					<select name="languageSelect" id="languageSelect">
+					<option value='1'>Chinese</option>
+					<option value='2'>English</option>
+					<option value='3'>French</option>
+					<option value='4'>German</option>
+					<option value='5'>Italian</option>
+					<option value='6'>Spanish</option>
+					</select>
+					</li>
 
-			</form>
+					<li>
+					<label>Location Range:</label>
+					Within 
+					<input type="text" id="minAge" value="18" size="2">
+					miles of me
+					</li>
+
+                </ul>
+            </form>
 		</script>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
