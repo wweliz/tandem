@@ -18,6 +18,41 @@ var LogInView = Backbone.View.extend({
 
 });
 
+// SET LANGUAGES VIEW ///////////////////////////
+var SetLanguagesView = Backbone.View.extend({
+	className : 'set-lang',
+	setLangTemplate: _.template($('.set-lang-template').text()),
+
+	initialize: function(){
+		//appends set-lang-view div with contents of the set-lang-template
+		$('.set-lang-view').append(this.el);
+	},
+
+	render: function(){
+		this.$el.html(this.setLangTemplate);
+		return this;
+	}
+
+});
+
+// WANT TO MEET VIEW ////////////////////////////
+var ToMeetView = Backbone.View.extend({
+	className : 'to-meet',
+	toMeetTemplate: _.template($('.to-meet-template').text()),
+
+	initialize: function(){
+		//appends to-meet-view div with contents of the login-template
+		$('.to-meet-view').append(this.el);
+	},
+
+	render: function(){
+		this.$el.html(this.toMeetTemplate);
+		return this;
+	}
+
+});
+
+
 // THE APP ROUTER ///////////////////////////////
 var AppRouter = Backbone.Router.extend({
 	routes: {
