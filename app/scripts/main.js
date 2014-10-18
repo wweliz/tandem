@@ -1,8 +1,8 @@
-/* global _, Backbone, $ */
+/* global _, Parse, $ */
 'use strict';
 
 // LOG IN VIEW //////////////////////////////////
-var LogInView = Backbone.View.extend({
+var LogInView = Parse.View.extend({
 	className : 'login',
 	loginTemplate: _.template($('.login-template').text()),
 
@@ -20,7 +20,7 @@ var LogInView = Backbone.View.extend({
 console.log('render function ran');
 
 // ABOUT ME VIEW ////////////////////////////////
-var AboutMeView = Backbone.View.extend({
+var AboutMeView = Parse.View.extend({
 	className : 'about-me',
 	aboutMeTemplate: _.template($('.about-me-template').text()),
 
@@ -39,7 +39,7 @@ var AboutMeView = Backbone.View.extend({
 });
 
 // SET LANGUAGES VIEW ///////////////////////////
-var SetLanguagesView = Backbone.View.extend({
+var SetLanguagesView = Parse.View.extend({
 	className : 'set-lang',
 	setLangTemplate: _.template($('.set-lang-template').text()),
 
@@ -57,7 +57,7 @@ var SetLanguagesView = Backbone.View.extend({
 });
 
 // WANT TO MEET VIEW ////////////////////////////
-var ToMeetView = Backbone.View.extend({
+var ToMeetView = Parse.View.extend({
 	className : 'to-meet',
 	toMeetTemplate: _.template($('.to-meet-template').text()),
 
@@ -75,7 +75,7 @@ var ToMeetView = Backbone.View.extend({
 });
 
 // MESSENGER VIEW ///////////////////////////////
-var MessengerView = Backbone.View.extend({
+var MessengerView = Parse.View.extend({
 	className : 'messenger',
 	messengerTemplate: _.template($('.messenger-template').text()),
 
@@ -93,7 +93,7 @@ var MessengerView = Backbone.View.extend({
 });
 
 // THE APP ROUTER ///////////////////////////////
-var AppRouter = Backbone.Router.extend({
+var AppRouter = Parse.Router.extend({
 	routes: {
 		//URL to match	//function called when the hash matches
 
@@ -139,5 +139,6 @@ var AppRouter = Backbone.Router.extend({
 });
 
 // INSTANTIATING THE ROUTER /////////////////////
+Parse.initialize("VqnYqznvx3Wc5ONfDghDMrZqwx77KEFiESe4l82W", "z3vDhzbq25kW3Y0uCNRnOBmsEMWb0XmANkjF1rTh");
 new AppRouter();
-Backbone.history.start();
+Parse.history.start();
