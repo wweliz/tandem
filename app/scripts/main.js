@@ -98,7 +98,7 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	initialize: function(){
-		renderLogIn();
+		this.renderLogIn();
 	},
 
   renderLogIn: function(){
