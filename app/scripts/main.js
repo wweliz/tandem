@@ -15,10 +15,10 @@ var LogInView = Backbone.View.extend({
 	render: function(){
 		this.$el.html(this.loginTemplate);
 		return this;
-		console.log('render function ran');
 	}
 
 });
+console.log('render function ran');
 
 // ABOUT ME VIEW ////////////////////////////////
 var AboutMeView = Backbone.View.extend({
