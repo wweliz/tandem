@@ -1,4 +1,4 @@
-/* global _, Backbone */
+/* global _, Backbone, $ */
 'use strict';
 
 // LOG IN VIEW //////////////////////////////////
@@ -17,6 +17,7 @@ var LogInView = Backbone.View.extend({
 		return this;
 	}
 });
+console.log('render function ran');
 
 // ABOUT ME VIEW ////////////////////////////////
 var AboutMeView = Backbone.View.extend({
@@ -32,6 +33,7 @@ var AboutMeView = Backbone.View.extend({
 	render: function(){
 		this.$el.html(this.aboutMeTemplate);
 		return this;
+
 	}
 
 });
@@ -94,6 +96,9 @@ var MessengerView = Backbone.View.extend({
 var AppRouter = Backbone.Router.extend({
 	routes: {
 		//URL to match	//function called when the hash matches
+
+
+
 		''					: 'renderLogIn',				//	url/#
 		'aboutme'		: 'renderAboutMe',			//	url/#aboutme
 		'setlang'		: 'renderSetLanguages',	//	url/#setlang
