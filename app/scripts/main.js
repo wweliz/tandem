@@ -1,4 +1,4 @@
-/* global _, Backbone */
+/* global _, Backbone, $ */
 'use strict';
 
 // LOG IN VIEW //////////////////////////////////
@@ -14,6 +14,25 @@ var LogInView = Backbone.View.extend({
 	render: function(){
 		this.$el.html(this.loginTemplate);
 		return this;
+	}
+
+});
+
+// ABOUT ME VIEW ////////////////////////////////
+var AboutMeView = Backbone.View.extend({
+	className : 'about-me',
+	aboutMeTemplate: _.template($('.about-me-template').text()),
+
+	initialize: function(){
+		//appends about-me-view div with contents of the about-me-template
+		$('.about-me-view').append(this.el);
+		this.render();
+	},
+
+	render: function(){
+		this.$el.html(this.aboutMeTemplate);
+		return this;
+
 	}
 
 });
@@ -52,21 +71,59 @@ var ToMeetView = Backbone.View.extend({
 
 });
 
+// MESSENGER VIEW ///////////////////////////////
+var MessengerView = Backbone.View.extend({
+	className : 'messenger',
+	messengerTemplate: _.template($('.messenger-template').text()),
+
+	initialize: function(){
+		//appends messenger-view div with contents of the messenger-template
+		$('.messenger-view').append(this.el);
+	},
+
+	render: function(){
+		this.$el.html(this.messengerTemplate);
+		return this;
+	}
+
+});
 
 // THE APP ROUTER ///////////////////////////////
 var AppRouter = Backbone.Router.extend({
 	routes: {
 		//URL to match	//function called when the hash matches
-		''				: 'renderLogIn',				//	url/#
-		
+
+
+
+		''					: 'renderLogIn',				//	url/#
+		'aboutme'		: 'renderAboutMe',			//	url/aboutme
+		'setlang'		: 'renderSetLanguages',	//	url/setlang
+		'tomeet'		: 'renderToMeet',				//	url/tomeet
+		'messenger'	: 'renderMessenger'			//	url/messenger
 	},
 
 	initialize: function(){
-
+		this.renderLogIn();
 	},
 
   renderLogIn: function(){
   	new LogInView();
+  },
+
+  renderAboutMe: function(){
+  	new AboutMeView();
+  },
+
+    renderSetLanguages: function(){
+  	new SetLanguagesView();
+  },
+
+	renderToMeet: function(){
+  	new ToMeetView();
+  },
+
+  renderMessenger: function(){
+  	new MessengerView();
   }
 
 });
