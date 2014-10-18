@@ -122,7 +122,7 @@ var AppRouter = Parse.Router.extend({
   	this.swap( new SetLanguagesView() );
   },
 
-	renderToMeet: function(){
+  renderToMeet: function(){
   	this.swap( new ToMeetView() );
   },
 
