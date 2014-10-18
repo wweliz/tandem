@@ -58,6 +58,7 @@ var AppRouter = Backbone.Router.extend({
 	routes: {
 		//URL to match	//function called when the hash matches
 		''				: 'renderLogIn',				//	url/#
+		
 	},
 
 	initialize: function(){
