@@ -159,3 +159,63 @@ var MessengerView = Parse.View.extend({
 	}
 
 });
+<<<<<<< HEAD
+=======
+
+// THE APP ROUTER ///////////////////////////////
+var AppRouter = Parse.Router.extend({
+	routes: {
+		//URL to match	//function called when the hash matches
+
+
+
+		''					: 'renderLogIn',				//	url/#
+		'aboutme'		: 'renderAboutMe',			//	url/#aboutme
+		'setlang'		: 'renderSetLanguages',	//	url/#setlang
+		'tomeet'		: 'renderToMeet',				//	url/#tomeet
+		'messenger'	: 'renderMessenger'			//	url/#messenger
+	},
+
+	initialize: function(){
+		this.currentView = null;
+	},
+
+  renderLogIn: function(){
+  	this.swap( new LogInView() );
+  },
+
+  renderAboutMe: function(){
+  	this.swap( new AboutMeView() );
+  },
+
+  renderSetLanguages: function(){
+  	this.swap( new SetLanguagesView() );
+  },
+
+	renderToMeet: function(){
+  	this.swap( new ToMeetView() );
+  },
+
+  renderMessenger: function(){
+  	this.swap( new MessengerView() );
+  },
+
+  swap: function(view){
+	  if (this.currentView) {this.currentView.remove();
+	  this.currentView = view;
+	  this.currentView.render();
+  }
+}
+});
+
+// INSTANTIATING THE ROUTER /////////////////////
+Parse.initialize('VqnYqznvx3Wc5ONfDghDMrZqwx77KEFiESe4l82W', 'z3vDhzbq25kW3Y0uCNRnOBmsEMWb0XmANkjF1rTh');
+new AppRouter();
+Parse.history.start();
+
+
+// $(document).ready(function() {
+//     $('.menu').dropit();
+//
+// });
+>>>>>>> 25226309c12986bc70bf6bec2665c783bbbd819e
