@@ -22,6 +22,11 @@
 		<!--[if lt IE 10]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
+		<header>
+			<div class="main-header-div">
+				<div><img class="main-header" src="images/tandem_logo.png"></div>
+			</div>
+		</header>
 		<div class="main-container">
 			<div class="signup-view"></div>
 			<div class="login-view"></div>
@@ -31,6 +36,9 @@
 			<div class="messenger-view"></div>
 		</div>
 
+    <div class="footer-div">
+    	<div><img src="images/icons3.png"></div>
+    </div>
 		<!-- Scripts -->
 		<script type="text/template" class="signup-template">
 			<h1>Sign Up</h1>
@@ -52,8 +60,13 @@
 		</script>
 
 		<script type="text/template" class="set-lang-template">
-			
+
 			<div class="set-lang-container">
+
+			<div class="set-lang-header">
+				<h1>Select Languages</h1>
+			</div>
+
 				 <div class="list-choice" id="native-language">
 					 <div class="list-choice-title">Native Language</div>
 						 <div class="list-choice-objects">
@@ -80,6 +93,10 @@
 							<label>
 								 <input type="radio" value="nl6" name="lang"/>
 								 <span>Chinese</span>
+							</label>
+							<label>
+								<input type="radio" value="nl7" name="lang"/>
+								<span>Russian</span>
 							</label>
 					</div>
 				</div>
@@ -218,6 +235,10 @@
 				</div>
 			</div>
 
+			<div class="about-me-done">
+			<a href="#"><button type="submit">Next<span>&#10095</span></button></a>
+			</div>
+
 			</div>
 		</script>
 
@@ -236,9 +257,9 @@
 				<div class="info-inputs">
 					<input class="name-input" type="text" placeholder="Name">
 					<div>
-					<input class="age-input" type="text" placeholder="Age">
-					<input class="gender-input" type="text" placeholder="Male/Female">
-				</div>
+						<input class="age-input" type="text" placeholder="Age">
+						<input class="gender-input" type="text" placeholder="Male/Female">
+					</div>
 				</div>
 
 				<div class="about-me-div">
@@ -249,22 +270,22 @@
 				<div class="my-lang-div">
 					<h1>My Languages</h1>
 					<ul class="each-lang">
-						<li>hey...</li>
-						<li>hey...</li>
-						<li>hey...</li>
+						<li>English</li>
+						<li>Italian</li>
+						<li>Russian</li>
 					</ul>
 
 					<ul class="each-prof">
-						<li>hey...</li>
-						<li>hey...</li>
-						<li>hey...</li>
+						<li>Fluent</li>
+						<li>Intermediate</li>
+						<li>Beginner</li>
 					</ul>
 				</div>
 				<div class="about-me-done">
-					<button class="about-me-btn button" type="submit">Done</button>
+					<button class="about-me-btn button" type="submit">Next<span>&#10095</span></button>
 				</div>
 			</div>
-		 </div>
+		 <!-- </div> -->
 		</script>
 
 		<script type="text/template" class="to-meet-template">
@@ -296,6 +317,7 @@
 					</li>
 
 					<li>
+
 					<label>Location Range: </label>
 					Within 
 					<input type="text" id="minAge" placeholder="20" size="2">
@@ -354,7 +376,7 @@
 		<!-- bower:js -->
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/underscore/underscore.js"></script>
-		<!-- <script src="bower_components/backbone/backbone.js"></script> -->
+		<script src="bower_components/backbone/backbone.js"></script>
 		<script src="bower_components/parse-js-sdk/lib/parse.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
