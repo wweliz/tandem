@@ -22,14 +22,15 @@ var LogInView = Parse.View.extend({
 
 	userLogIn: function(){
 		//naming the value of the input fields
-		var usernameVal = $('#email').val();
-		var passwordVal = $('#password').val();
+		var usernameVal = $('.username-input').val();
+		var emailVal = $('.email-input').val();
+		var passwordVal = $('.password-input').val();
 		
 		//calls Parse's login function
 		Parse.User.logIn(usernameVal, passwordVal, {
 		  success: function(user) {
 				console.log('Username', user.get('email'), 'is logged in.');
-				router.navigate('userview', {trigger: true});
+				router.navigate('aboutme', {trigger: true});
 			},
 
 		  error: function(user, error) {
@@ -96,6 +97,10 @@ var AboutMeView = Parse.View.extend({
 	className : 'about-me',
 	aboutMeTemplate: _.template($('.about-me-template').text()),
 
+	events: {
+		'click .about-me-btn' : 'setAboutMe'
+	},
+
 	initialize: function(){
 		//appends about-me-view div with contents of the about-me-template
 		$('.about-me-view').html(this.el);
@@ -104,7 +109,24 @@ var AboutMeView = Parse.View.extend({
 	render: function(){
 		this.$el.html(this.aboutMeTemplate);
 		return this;
+	},
 
+	setAboutMe: function(){
+		//naming the value of the input fields
+		var nameVal = $('.name-input').val();
+		var ageVal = $('.age-input').val();
+		var genderVal = $('.gender-input').val();
+		var aboutMeVal = $('.about-text').val();
+		var user = Parse.User.current();
+
+		user.set({
+			'name':				nameVal,
+			'age':				ageVal,
+			'gender':			genderVal,
+			'aboutText':	aboutMeVal
+		});
+
+		router.navigate('tomeet', {trigger: true});
 	}
 
 });

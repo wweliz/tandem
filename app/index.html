@@ -33,7 +33,8 @@
 
 		<!-- Scripts -->
 		<script type="text/template" class="signup-template">
-			<h1>Sign Up</h1>			
+			<h1>Sign Up</h1>
+			<p>Tandem is an app that connects you to like-minded people that share your love for languages, wherever you are and wherever you go. The best and only way to become fluent in any language is to engage in conversation with others. Tandem enables you to find people near your location that, just like you, seek to meet people to practice new and exotic languages with. Get ready to immerse yourself in authentic foreign cultures with interesting people from all over the world.</p><p>Tandem: your personal cultural exchange.</p>
 			<input class="username-input" type="text" placeholder="Username">
 			<input class="email-input" type="text" placeholder="Email">
 			<input class="password-input" type="password" placeholder="Password">
@@ -42,9 +43,10 @@
 
 		<script type="text/template" class="login-template">
 			<h1>Welcome to Tandem.</h1>
-			<p>Tandem is an app that connects you to like-minded people that share your love for languages, wherever you are and wherever you go. The best and only way to become fluent in any language is to engage in conversation with others. Tandem enables you to find people near your location that, just like you, seek to meet people to practice new and exotic languages with. Get ready to immerse yourself in authentic foreign cultures with interesting people from all over the world.</p><p>Tandem: your personal cultural exchange.</p>
-			<p><input type="email" id="email" placeholder="email"></p>
-			<p><input type="text" id="password" placeholder="password"></p>
+			<p>Tandem: your personal cultural exchange.</p>
+			<p><input class="username-input" type="text" placeholder="Username"></p>
+			<p><input class="email-input" type="text" placeholder="Email"></p>
+			<p><input class="password-input" type="password" placeholder="Password"></p>
 			<button class="login-btn">Log In</button>
 			<p><a href="#signup">New to Tandem? Create an account. (It&rsquo;s painless we promise.)</a></p>
 		</script>
@@ -232,16 +234,16 @@
 				</a>
 
 				<div class="info-inputs">
-					<input class="name-input" type="text" value="name" placeholder="Name">
+					<input class="name-input" type="text" placeholder="Name">
 					<div>
-					<input class="age-input" type="text" value="age" placeholder="Age">
-					<input class="gender-input" type="text" value="Gender" placeholder="Male/Female">
+					<input class="age-input" type="text" placeholder="Age">
+					<input class="gender-input" type="text" placeholder="Male/Female">
 				</div>
 				</div>
 
 				<div class="about-me-div">
 					<h1>About Me</h1>
-					<textarea placeholder="Write a short paragraph about yourself"></textarea>
+					<input class="about-text" type="text" placeholder="Write a short paragraph about yourself">
 				</div>
 
 				<div class="my-lang-div">
@@ -259,7 +261,7 @@
 					</ul>
 				</div>
 				<div class="about-me-done">
-				<a href="#"><button type="submit">Done</button></a>
+					<button class="about-me-btn button" type="submit">Done</button>
 				</div>
 			</div>
 		 </div>
