@@ -30,7 +30,7 @@ var LogInView = Parse.View.extend({
 		Parse.User.logIn(usernameVal, passwordVal, {
 		  success: function(user) {
 				console.log('Username', user.get('email'), 'is logged in.');
-				router.navigate('aboutme', {trigger: true});
+				router.navigate('setlang', {trigger: true});
 			},
 
 		  error: function(user, error) {

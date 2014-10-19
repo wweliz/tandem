@@ -41,22 +41,26 @@
     </div>
 		<!-- Scripts -->
 		<script type="text/template" class="signup-template">
+			<div class="signup">
 			<h1>Sign Up</h1>
 			<p>Tandem is an app that connects you to like-minded people that share your love for languages, wherever you are and wherever you go. The best and only way to become fluent in any language is to engage in conversation with others. Tandem enables you to find people near your location that, just like you, seek to meet people to practice new and exotic languages with. Get ready to immerse yourself in authentic foreign cultures with interesting people from all over the world.</p><p>Tandem: your personal cultural exchange.</p>
 			<input class="username-input" type="text" placeholder="Username">
 			<input class="email-input" type="text" placeholder="Email">
 			<input class="password-input" type="password" placeholder="Password">
-			<span class="signup-btn button">Sign Up</span>
+			<button class="signup-btn">Sign Up</button>
+		 </div>
 		</script>
 
 		<script type="text/template" class="login-template">
+		 <div class="login-container">
 			<h1>Welcome to Tandem.</h1>
-			<p>Tandem: your personal cultural exchange.</p>
+			<p class="blurb">Tandem: your personal cultural exchange.</p>
 			<p><input class="username-input" type="text" placeholder="Username"></p>
 			<p><input class="email-input" type="text" placeholder="Email"></p>
 			<p><input class="password-input" type="password" placeholder="Password"></p>
-			<button class="login-btn">Log In</button>
-			<p><a href="#signup">New to Tandem? Create an account. (It&rsquo;s painless we promise.)</a></p>
+			<div><button class="login-btn">Log In</button></div>
+			<p class="new-to"><a href="#signup">New to Tandem? Create an account. (It&rsquo;s painless we promise.)</a></p>
+		 </div>
 		</script>
 
 		<script type="text/template" class="set-lang-template">
@@ -264,7 +268,7 @@
 
 				<div class="about-me-div">
 					<h1>About Me</h1>
-					<input class="about-text" type="text" placeholder="Write a short paragraph about yourself">
+					<textarea class="about-text" type="text" placeholder="Write a short paragraph about yourself"></textarea>
 				</div>
 
 				<div class="my-lang-div">
@@ -296,8 +300,8 @@
 				<ul>
 
 					<li>
-					<label>Min. Age: </label><input type="text" id="minAge" placeholder="18" value="" size="2">
-					<label>Max. Age: </label><input type="text" id="maxAge" placeholder="99" value="" size="2">
+					<label>Min. Age: </label><input class="age" type="text" id="minAge" placeholder="18" value="" size="2">
+					<label>Max. Age: </label><input class="age" type="text" id="maxAge" placeholder="99" value="" size="2">
 					</li>
 
 					<li>
