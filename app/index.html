@@ -267,27 +267,22 @@
 
 		<script type="text/template" class="to-meet-template">
 
-		<h2>Who I want to meet</h2>
-						<form>
-								<ul>
+		<div class="to-meet-container">
+			<h1>WHO I WANT TO MEET</h1>
+				<form>
+				<ul>
 
 					<li>
-					<label>Minimum Age:</label>
-					<input type="text" id="minAge" value="18" size="2">
-					<label>Maximum Age:</label>
-					<input type="text" id="maxAge" value="99" size="2">
+					<label>Min. Age: </label><input type="text" id="minAge" placeholder="18" value="" size="2">
+					<label>Max. Age: </label><input type="text" id="maxAge" placeholder="99" value="" size="2">
 					</li>
 
 					<li>
-					<label>Sex:</label>
-					<select name="sexSelect" id="sexSelect">
-					<option value='1'>Male</option>
-					<option value='2'>Female</option>
-					</select>
+					<label>Gender: </label><input type="text" id="minAge" placeholder="Male/Female" value="" size="16">
 					</li>
 
 					<li>
-					<label>Language:</label>
+					<label>Language: </label>
 					<select name="languageSelect" id="languageSelect">
 					<option value='1'>Chinese</option>
 					<option value='2'>English</option>
@@ -299,14 +294,19 @@
 					</li>
 
 					<li>
-					<label>Location Range:</label>
+					<label>Location Range: </label>
 					Within 
-					<input type="text" id="minAge" value="18" size="2">
+					<input type="text" id="minAge" placeholder="20" size="2">
 					miles of me
 					</li>
 
-								</ul>
-						</form>
+					<li class="to-meet-done">
+					<a href="#"><button>NEXT</button></a>
+					</li>
+
+				</ul>
+				</form>
+		</div>
 		</script>
 
 		<script type="text/template" class="messenger-template">
@@ -314,22 +314,22 @@
 				<h1>Tandem Messenger</h1>
 
 						<ul class="allMsgs">
-												<li>
-														<img src="http://placekitten.com/g/60/90" />
-														<div class="nonAvatar">
-																<h5>Lorenzo</h5>
-																<span>(timestamp)</span>
-																<p>Wanna speak Italian?</p>
-														</div>
-												</li>
-												<li>
-														<img src="http://placekitten.com/g/60/90" />
-														<div class="nonAvatar">
-																<h5>San</h5>
-																<span>(timestamp)</span>
-																<p>Nah I prefer Chinese.</p>
-														</div>
-												</li>
+								<li>
+										<img src="http://placekitten.com/g/60/90" />
+										<div class="nonAvatar">
+												<h5>Lorenzo</h5>
+												<span>(timestamp)</span>
+												<p>Wanna speak Italian?</p>
+										</div>
+								</li>
+								<li>
+										<img src="http://placekitten.com/g/60/90" />
+										<div class="nonAvatar">
+												<h5>San</h5>
+												<span>(timestamp)</span>
+												<p>Nah I prefer Chinese.</p>
+										</div>
+								</li>
 						</ul>
 
 				<button class="postMsgButton">+</button>
