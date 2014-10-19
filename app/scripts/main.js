@@ -24,7 +24,7 @@ var LogInView = Parse.View.extend({
 		//naming the value of the input fields
 		var usernameVal = $('#email').val();
 		var passwordVal = $('#password').val();
-		
+
 		//calls Parse's login function
 		Parse.User.logIn(usernameVal, passwordVal, {
 		  success: function(user) {
@@ -43,7 +43,7 @@ var LogInView = Parse.View.extend({
 
 // SIGN UP VIEW ///////////////////////////////////////////////////////////
 var SignUpView = Parse.View.extend({
-	
+
 	signupTemplate: _.template($('.signup-template').text()),
 
 	events: {
@@ -159,8 +159,6 @@ var MessengerView = Parse.View.extend({
 	}
 
 });
-<<<<<<< HEAD
-=======
 
 // THE APP ROUTER ///////////////////////////////
 var AppRouter = Parse.Router.extend({
@@ -218,4 +216,3 @@ Parse.history.start();
 //     $('.menu').dropit();
 //
 // });
->>>>>>> 25226309c12986bc70bf6bec2665c783bbbd819e
