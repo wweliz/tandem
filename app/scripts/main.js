@@ -159,15 +159,11 @@ var MessengerView = Parse.View.extend({
 	}
 
 });
-<<<<<<< HEAD
-=======
 
 // THE APP ROUTER ///////////////////////////////
 var AppRouter = Parse.Router.extend({
 	routes: {
 		//URL to match	//function called when the hash matches
-
-
 
 		''					: 'renderLogIn',				//	url/#
 		'aboutme'		: 'renderAboutMe',			//	url/#aboutme
@@ -207,15 +203,3 @@ var AppRouter = Parse.Router.extend({
   }
 }
 });
-
-// INSTANTIATING THE ROUTER /////////////////////
-Parse.initialize('VqnYqznvx3Wc5ONfDghDMrZqwx77KEFiESe4l82W', 'z3vDhzbq25kW3Y0uCNRnOBmsEMWb0XmANkjF1rTh');
-new AppRouter();
-Parse.history.start();
-
-
-// $(document).ready(function() {
-//     $('.menu').dropit();
-//
-// });
->>>>>>> 25226309c12986bc70bf6bec2665c783bbbd819e
