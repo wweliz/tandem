@@ -36,6 +36,9 @@
 			<div class="messenger-view"></div>
 		</div>
 
+    <div class="footer-div">
+    	<div><img src="images/icons3.png"></div>
+    </div>
 		<!-- Scripts -->
 		<script type="text/template" class="signup-template">
 			<h1>Sign Up</h1>
@@ -57,6 +60,11 @@
 		<script type="text/template" class="set-lang-template">
 
 			<div class="set-lang-container">
+
+			<div class="set-lang-header">
+				<h1>Select Languages</h1>
+			</div>
+
 				 <div class="list-choice" id="native-language">
 					 <div class="list-choice-title">Native Language</div>
 						 <div class="list-choice-objects">
@@ -83,6 +91,10 @@
 							<label>
 								 <input type="radio" value="nl6" name="lang"/>
 								 <span>Chinese</span>
+							</label>
+							<label>
+								<input type="radio" value="nl7" name="lang"/>
+								<span>Russian</span>
 							</label>
 					</div>
 				</div>
@@ -221,6 +233,10 @@
 				</div>
 			</div>
 
+			<div class="about-me-done">
+			<a href="#"><button type="submit">Next<span>&#10095</span></button></a>
+			</div>
+
 			</div>
 		</script>
 
@@ -252,19 +268,19 @@
 				<div class="my-lang-div">
 					<h1>My Languages</h1>
 					<ul class="each-lang">
-						<li>hey...</li>
-						<li>hey...</li>
-						<li>hey...</li>
+						<li>English</li>
+						<li>Italian</li>
+						<li>Russian</li>
 					</ul>
 
 					<ul class="each-prof">
-						<li>hey...</li>
-						<li>hey...</li>
-						<li>hey...</li>
+						<li>Fluent</li>
+						<li>Intermediate</li>
+						<li>Beginner</li>
 					</ul>
 				</div>
 				<div class="about-me-done">
-				<a href="#"><button type="submit">Done</button></a>
+				<a href="#"><button type="submit">Next<span>&#10095</span></button></a>
 				</div>
 			</div>
 		 <!-- </div> -->
@@ -357,7 +373,7 @@
 		<!-- bower:js -->
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/underscore/underscore.js"></script>
-		<!-- <script src="bower_components/backbone/backbone.js"></script> -->
+		<script src="bower_components/backbone/backbone.js"></script>
 		<script src="bower_components/parse-js-sdk/lib/parse.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
