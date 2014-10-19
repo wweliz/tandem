@@ -51,13 +51,13 @@
 			<p>Tandem is an app that connects you to like-minded people that share your love for languages, wherever you are and wherever you go. The best and only way to become fluent in any language is to engage in conversation with others. Tandem enables you to find people near your location that, just like you, seek to meet people to practice new and exotic languages with. Get ready to immerse yourself in authentic foreign cultures with interesting people from all over the world.</p><p>Tandem: your personal cultural exchange.</p>
 			<p><input type="email" id="email" placeholder="email"></p>
 			<p><input type="text" id="password" placeholder="password"></p>
-			<button class="login">Log In</button>
-			<p><a href="">New to Tandem? Create an account. (It&rsquo;s painless we promise.)</a></p>
+			<button class="login-btn">Log In</button>
+			<p><a href="#signup">New to Tandem? Create an account. (It&rsquo;s painless we promise.)</a></p>
 		</script>
 
 		<script type="text/template" class="set-lang-template">
-      <div class="set-lang-container">
-      	<nav>
+			<div class="set-lang-container">
+				<nav>
 	<ul>
 		<li><a href="#">Language<div id="down-triangle"></div></a>
 			<ul>
@@ -70,10 +70,10 @@
 		</li>
 	</ul>
 </nav>
-      </div>
+			</div>
 		</script>
 
-    	<script type="text/template" class="about-me-template">
+			<script type="text/template" class="about-me-template">
 			 <div class="about-me-container">
 
 			 </div>
@@ -83,8 +83,8 @@
 		<script type="text/template" class="to-meet-template">
 
 		<h2>Who I want to meet</h2>
-            <form>
-                <ul>
+						<form>
+								<ul>
 
 					<li>
 					<label>Minimum Age:</label>
@@ -120,8 +120,37 @@
 					miles of me
 					</li>
 
-                </ul>
-            </form>
+								</ul>
+						</form>
+		</script>
+
+		<script type="text/template" class="messenger-template">
+		<div class="chatLog">
+				<h1>Tandem Messenger</h1>
+
+						<ul class="allMsgs">
+												<li>
+														<img src="http://placekitten.com/g/60/90" />
+														<div class="nonAvatar">
+																<h5>Lorenzo</h5>
+																<span>(timestamp)</span>
+																<p>Wanna speak Italian?</p>
+														</div>
+												</li>
+												<li>
+														<img src="http://placekitten.com/g/60/90" />
+														<div class="nonAvatar">
+																<h5>San</h5>
+																<span>(timestamp)</span>
+																<p>Nah I prefer Chinese.</p>
+														</div>
+												</li>
+						</ul>
+
+				<button class="postMsgButton">+</button>
+				<input type="text" class="messageInput" placeholder="(ENTER MESSAGE HERE)" size="80">
+
+				</div>
 		</script>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -144,6 +173,7 @@
 
 		<!-- build:js scripts/main.js -->
 		<script src="scripts/main.js"></script>
+		<script src="scripts/router.js"></script>
 		<!-- endbuild -->
 	</body>
 </html>

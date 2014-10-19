@@ -131,3 +131,15 @@ nav ul ul li a:hover {
   margin: 0 auto;
   outline: solid red 1px;
 }
+
+.nonAvatar {
+display: inline-block;
+
+h5 {
+display: inline-block;
+}
+}
+
+.allMsgs li {
+list-style-type: none;
+}
