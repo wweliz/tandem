@@ -165,8 +165,6 @@ var AppRouter = Parse.Router.extend({
 	routes: {
 		//URL to match	//function called when the hash matches
 
-
-
 		''					: 'renderLogIn',				//	url/#
 		'aboutme'		: 'renderAboutMe',			//	url/#aboutme
 		'setlang'		: 'renderSetLanguages',	//	url/#setlang
@@ -204,6 +202,7 @@ var AppRouter = Parse.Router.extend({
 	  this.currentView.render();
   }
 }
+
 });
 
 // INSTANTIATING THE ROUTER /////////////////////
@@ -216,3 +215,5 @@ Parse.history.start();
 //     $('.menu').dropit();
 //
 // });
+
+//});
