@@ -19,7 +19,6 @@ p {
 
 // COLORS ////////////////////////////////////////////////////////////////
 body { background-color: #E9E9E9; }
-
 //$color:	#373F4B;		// rgb (55, 63, 75)
 
 // LOGIN PAGE STYLING ////////////////////////////////////////////////////
@@ -183,11 +182,9 @@ body { background-color: #E9E9E9; }
 
 .add-image-a {
   text-decoration: none;
-
 }
 
 .info-inputs {
-  //padding-left: 10%;
   width: 50%;
   margin: 8% auto;
 }
@@ -202,6 +199,7 @@ body { background-color: #E9E9E9; }
   color: red;
   font-size: 15px;
 }
+
 .age-input {
   width: 45%;
   height: 50px;
@@ -290,12 +288,8 @@ body { background-color: #E9E9E9; }
 }
 
 .nonAvatar {
-display: inline-block;
-
-h5 {
-display: inline-block;
+	display: inline-block;
+	h5 { display: inline-block;}
 }
 
-.allMsgs li {
-list-style-type: none;
-}
+.allMsgs li { list-style-type: none; }
